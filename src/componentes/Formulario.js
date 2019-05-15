@@ -21,6 +21,7 @@ export default class Formulario extends Component{
     console.log(gasto);
 
     //Agregarlo y enviarlo por props
+    this.props.agregarGasto(gasto);
 
     //Resetiar (Opcional)
     e.currentTarget.reset();
