@@ -18,8 +18,6 @@ export default class Formulario extends Component{
       gasto: this.cantidadGasto.current.value  
     }
 
-    console.log(gasto);
-
     //Agregarlo y enviarlo por props
     this.props.agregarGasto(gasto);
 
