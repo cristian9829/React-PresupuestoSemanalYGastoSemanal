@@ -3,6 +3,7 @@ import '../css/App.css';
 import Header from './Header';
 import Formulario from './Formulario';
 import Listado from './Listado'
+import ControlPresupuesto from './ControlPresupuesto';
 import {validarPresupuesto} from '../Helper';
 
 
@@ -71,6 +72,7 @@ class App extends React.Component {
               <Listado
                 gastos = {this.state.gastos}
               />
+              <ControlPresupuesto/>
             </div>
           </div>
         </div>
