@@ -1,10 +1,14 @@
 import React from 'react';
 
 
-const Restante = () =>{
-  return(
-    <p>Restante</p>
-  )
+class Restante extends React.Component{
+  render(){
+    return(
+      <div className="alert alert-success">
+        Restante: $ {this.props.restante}
+      </div> 
+    )
+  }
 }
 
 export default Restante;
