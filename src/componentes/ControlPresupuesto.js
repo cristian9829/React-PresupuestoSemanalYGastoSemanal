@@ -10,6 +10,7 @@ export default class ControlPresupuesto extends Component{
           presupuesto = {this.props.presupuesto}
         />
         <Restante
+          presupuesto = {this.props.presupuesto}
           restante = {this.props.restante}
         />
       </React.Fragment>
