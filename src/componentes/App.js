@@ -32,9 +32,6 @@ class App extends React.Component {
     }else{
       this.obtenerPresupuesto()
     }
-     
-
-    console.log(presupuesto)
   }
   
   //Agregar un nuevo gasto al state
@@ -42,6 +39,9 @@ class App extends React.Component {
   agregarGasto = gasto => {
     // Tomar una copia del state actual
     const gastos = {...this.state.gastos };
+    
+    //Restar al presupuesto
+    this.restarPresupuesto(gasto.gasto)
 
     // agregar el gasto al objeto del state
     gastos["gasto" + Date.now() ] = gasto;   
@@ -52,6 +52,29 @@ class App extends React.Component {
     this.setState({
       gastos: gastos
     })
+  }
+
+
+
+  // Restar del presupuesto cuando un gasto se crea
+
+  restarPresupuesto = cantidad =>{
+    //Leer el gasto
+    let restar = Number(cantidad)
+
+    //Tomar una copia del state
+    let restante = this.state.restante;
+
+    //Lo restamos
+
+    restante -= restar;
+    
+    //Agregamos el nuevo State
+    this.setState({
+      restante: restante
+    })
+
+
   }
   
   render(){
